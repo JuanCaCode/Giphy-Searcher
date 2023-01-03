@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Header from '@components/Header';
-
+import SearchingSection from '@containers/SearchingSection';
 
 import { Henny_Penny, Inter } from '@next/font/google'
 
@@ -16,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
+      <SearchingSection />
     </>
   )
 }

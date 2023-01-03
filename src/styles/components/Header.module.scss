@@ -1,10 +1,12 @@
 @import '@styles/vars.scss';
 #nav{
+    width: 100%;
     display: grid;
+    position: fixed;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
     background-color: $blue-dark;
     padding: 0rem 1rem;
-    height: 50px;
     box-sizing: border-box;
     align-content: center;
     .nav-left{
@@ -14,19 +16,22 @@
     .nav-right{
         display: flex;
         justify-content: right;
-        ul{
-            list-style: none;
-            display: flex;
-            align-items: center;
-            li{
+        align-items: center;
+        box-sizing: border-box;
+            a{
                 padding:0.5rem 0.5rem;
                 border:1px solid transparent;
-                transition: all 0.2s ease-in-out;
                 cursor: pointer;
+                display: flex;
+                align-items: center;
+                img{
+                    transition: all 0.1s ease-in-out;
+                }
+                img:hover{
+                    transform: scale(1.1);
+                }
             }
-            li:hover{
-                border:1px solid $white;
-            }
-        }
+
+
     }
 }

@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from '@styles/components/Header.module.scss';
+import github from '@icons/github.svg'
+import twitter from '@icons/twitter.svg'
+import linkedIn from '@icons/linkedin.svg'
+import Link from 'next/link';
+import Image from 'next/image';
 const Header = () => {
     return (
         <header>
@@ -8,12 +13,15 @@ const Header = () => {
                     <h3>Giphy Searcher</h3>
                 </div>
                 <div className={styles["nav-right"]}>
-                    <ul>
-                        <li>Github</li>
-                        <li>LinkedIn</li>
-                        <li>Twitter</li>
-                        <li>Contact</li>
-                    </ul>
+                    <Link target="_blank" href="https://github.com/JuanCCampo95">
+                        <Image width={30} src={github} />
+                    </Link>
+                    <Link target="_blank" href="https://twitter.com/JuanCCampoT">
+                        <Image width={30} src={twitter} />
+                    </Link>
+                    <Link target="_blank" href="https://www.linkedin.com/in/juancampo95/">
+                        <Image width={30} src={linkedIn} />
+                    </Link>
                 </div>
             </nav>
         </header>
