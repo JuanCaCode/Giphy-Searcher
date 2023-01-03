@@ -14,13 +14,13 @@ const Header = () => {
                 </div>
                 <div className={styles["nav-right"]}>
                     <Link target="_blank" href="https://github.com/JuanCCampo95">
-                        <Image width={30} src={github} />
+                        <Image width={30} alt="logo de github" src={github} />
                     </Link>
                     <Link target="_blank" href="https://twitter.com/JuanCCampoT">
-                        <Image width={30} src={twitter} />
+                        <Image width={30} alt="logo de twitter" src={twitter} />
                     </Link>
                     <Link target="_blank" href="https://www.linkedin.com/in/juancampo95/">
-                        <Image width={30} src={linkedIn} />
+                        <Image width={30} alt="logo de linkedin" src={linkedIn} />
                     </Link>
                 </div>
             </nav>

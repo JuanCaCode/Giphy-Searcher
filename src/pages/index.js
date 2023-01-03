@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '@components/Header';
 import SearchingSection from '@containers/SearchingSection';
+import ImagesGrid from '@containers/ImagesGrid';
 
 import { Henny_Penny, Inter } from '@next/font/google'
 
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Header />
       <SearchingSection />
+      <ImagesGrid />
     </>
   )
 }
