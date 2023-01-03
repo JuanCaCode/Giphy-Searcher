@@ -1,0 +1,32 @@
+@import '@styles/vars.scss';
+#nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $blue-dark;
+    padding: 0rem 1rem;
+    height: 50px;
+    box-sizing: border-box;
+    align-content: center;
+    .nav-left{
+        display: flex;
+        align-items: center;
+    }
+    .nav-right{
+        display: flex;
+        justify-content: right;
+        ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            li{
+                padding:0.5rem 0.5rem;
+                border:1px solid transparent;
+                transition: all 0.2s ease-in-out;
+                cursor: pointer;
+            }
+            li:hover{
+                border:1px solid $white;
+            }
+        }
+    }
+}
