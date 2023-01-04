@@ -8,6 +8,7 @@ import Image from 'next/image';
 const Header = () => {
     return (
         <header>
+            
             <nav id={styles.nav}>
                 <div className={styles["nav-left"]}>
                     <h3>Giphy Searcher</h3>

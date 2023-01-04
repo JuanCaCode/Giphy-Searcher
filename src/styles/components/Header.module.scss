@@ -2,10 +2,9 @@
 #nav{
     width: 100%;
     display: grid;
-    position: fixed;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px;
-    background-color: $blue-dark;
+    background-color: transparent;
     padding: 0rem 1rem;
     box-sizing: border-box;
     align-content: center;
@@ -34,4 +33,7 @@
 
 
     }
+}
+@media(max-width:768px){
+
 }
