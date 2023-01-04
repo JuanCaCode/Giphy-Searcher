@@ -8,7 +8,6 @@ const useGetImages = (API) => {
   useEffect(() => {
     (async () => {
       const res = await Axios(API);
-      console.log(res)
       setImages(res.data.data);
     })();
   },[API]);
