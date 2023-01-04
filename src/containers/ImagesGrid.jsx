@@ -4,14 +4,13 @@ import Spinning from "@components/Spinning";
 import styles from '@styles/containers/ImagesGrid.module.scss';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
-const API ="https://api.giphy.com/v1/gifs/trending?api_key=ouY5kaph8uGFcTkPSfe3yber002mqaWE&limit=25&rating=g";
 import AppContext from "@context/AppContext";
 
+const API ="https://api.giphy.com/v1/gifs/trending?api_key=ouY5kaph8uGFcTkPSfe3yber002mqaWE&limit=25&rating=g";
 const ImagesGrid = ()=>{
     const imagesGotten = useGetImages(API)
     const {images} = useContext(AppContext);
     const [loading,setLoading] = useState(false);
-    
     useEffect(()=>{
         if(images.length == 0 ){
             setLoading(true);
@@ -19,8 +18,6 @@ const ImagesGrid = ()=>{
             setLoading(false);
         }
     },[images])
-    
-
     return (
         <>
 
@@ -29,7 +26,7 @@ const ImagesGrid = ()=>{
                 {loading && <h2>Loading</h2>}
             </div>
             <section className={styles["section-image-grid"]}>
-                {imagesGotten.map((image)=>{
+                {imagesGotten.images.map((image)=>{
                     return(
                             <figure className={styles['figure-image-grid']} key={image.id}>
                                     <LazyLoadImage
@@ -38,7 +35,7 @@ const ImagesGrid = ()=>{
                                             alt="imagenes"     
                                             effect="blur" 
                                             width={500}
-                                            placeholderSrc={image.images.downsized.url}                                              
+                                            placeholderSrc={image.images.downsized.url}                                          
                                         />
                             </figure>
 
